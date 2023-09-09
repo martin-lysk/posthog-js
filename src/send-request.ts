@@ -85,7 +85,7 @@ export const xhr = ({
     req.timeout = timeout
     // send the ph_optout cookie
     // withCredentials cannot be modified until after calling .open on Android and Mobile Safari
-    req.withCredentials = true
+    req.withCredentials = false
     req.onreadystatechange = () => {
         if (req.readyState === 4) {
             // XMLHttpRequest.DONE == 4, except in safari 4
